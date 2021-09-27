@@ -6,10 +6,9 @@
   </div>
   <div class="header-left">
     <div class="devise-contents">
-    <a href="#" class="devise">ログイン</a>
+    <%= link_to "新規登録", new_user_registration_path, class:"devise"%>
     </div>
-    <div class="devise-contents">
-    <a href="#" class="devise">新規登録</a>
+    <%= link_to "ログイン", new_user_session_path, class:"devise"%>
     </div>
   </div>
 </div>

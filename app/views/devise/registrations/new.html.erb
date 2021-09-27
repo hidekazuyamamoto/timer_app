@@ -1,29 +1,26 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<%= render "shared/header" %>
+<div class="main">
+  <%=form_with model: @user, url: user_registration_path, class:"form", local: true do |f|%>
+    <h1 class="formmaintitle">新規登録</h1>
+    <div class="formcontens">
+    <p class="formtitle">E-mail<span class="indispensable">*必須</span></p>
+    <%= f.text_field :email, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">名前<span class="indispensable">*必須</span></p>
+    <%= f.text_field :name, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">パスワード<span class="indispensable">*必須</span></p>
+    <%= f.password_field :password, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">パスワード（確認）<span class="indispensable">*必須</span></p>
+    <%= f.password_field :password_confirmation, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <%= f.submit "登録する" ,class:"submitbtn"%>
+    </div>
+  <%end%>
+</div>
+<%= render "shared/footer" %>
