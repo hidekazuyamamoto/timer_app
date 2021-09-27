@@ -5,10 +5,20 @@
     </div>
   </div>
   <div class="header-left">
+    <% if user_signed_in?%>
+    <div class="devise-contents">
+    <%= link_to "ログアウト", destroy_user_session_path, class:"devise",method: :delete%>
+    </div>
+    <div class="devise-contents">
+    <%= link_to "マイページ", "#", class:"devise" %>
+    </div>
+    <%else%>
     <div class="devise-contents">
     <%= link_to "新規登録", new_user_registration_path, class:"devise"%>
     </div>
+    <div class="devise-contents">
     <%= link_to "ログイン", new_user_session_path, class:"devise"%>
     </div>
+    <%end%>
   </div>
 </div>
