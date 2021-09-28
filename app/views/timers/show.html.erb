@@ -1,0 +1,13 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="show-contents">
+    <div class="timer-titles">
+      <%@timer_title.each do |timer_title|%>
+        <%= link_to timer_title.timer_title ,"#", class:"timer-title"%>
+      <%end%>
+    </div>
+      <%= link_to "タイマーを作る", new_timer_title_path ,class:"create-timer-title"%>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

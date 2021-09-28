@@ -1,0 +1,11 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="timer-title-new">
+  <h1 class="timer-title-new-title">タイマー作成</h1>
+    <%= form_with(model: @timer_title, local: true) do |f| %>
+      <%= f.text_field :timer_title ,class:"timer-title-new-form",  maxlength:"10"%>
+    <%= f.submit "作成する",class:"timer-title-new-btn" %>
+  <%end%>
+  </div>
+</div>
+<%= render "shared/footer" %>

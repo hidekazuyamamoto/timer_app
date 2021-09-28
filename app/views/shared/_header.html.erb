@@ -10,7 +10,7 @@
     <%= link_to "ログアウト", destroy_user_session_path, class:"devise",method: :delete%>
     </div>
     <div class="devise-contents">
-    <%= link_to "マイページ", "#", class:"devise" %>
+    <%= link_to "マイページ", timer_path(current_user.id), class:"devise" %>
     </div>
     <%else%>
     <div class="devise-contents">

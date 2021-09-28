@@ -1,0 +1,2 @@
+class TimerTitle < ApplicationRecord
+end
