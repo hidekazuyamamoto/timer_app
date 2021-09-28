@@ -1,0 +1,19 @@
+.timer-title-new-title{
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.timer-title-new{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.timer-title-new-form{
+  height: 50px;
+  font-size: 30px;
+}
+.timer-title-new-btn{
+  font-weight: 900;
+  margin-left: 20px;
+  padding: 5px;
+}
