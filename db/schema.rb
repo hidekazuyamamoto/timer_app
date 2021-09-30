@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_28_000930) do
+ActiveRecord::Schema.define(version: 2021_09_28_012730) do
+
+  create_table "time_counts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "timer_title_id"
+    t.integer "time"
+    t.index ["timer_title_id"], name: "index_time_counts_on_timer_title_id"
+  end
 
   create_table "timer_titles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -33,5 +41,6 @@ ActiveRecord::Schema.define(version: 2021_09_28_000930) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "time_counts", "timer_titles"
   add_foreign_key "timer_titles", "users"
 end
