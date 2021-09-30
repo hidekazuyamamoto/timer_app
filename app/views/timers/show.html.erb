@@ -2,8 +2,11 @@
 <div class="main">
   <div class="show-contents">
     <div class="timer-titles">
-      <%@timer_title.each do |timer_title|%>
-        <%= link_to timer_title.timer_title ,new_timer_title_timer_count_path(timer_title.id), class:"timer-title"%>
+      <%@timer_title.zip(@time_count) do |timer_title, time_count|%>
+        <div class="timer-title">
+          <%= link_to timer_title.timer_title ,new_timer_title_timer_count_path(timer_title.id), class:"timer-title"%>
+          <p class="time"><%=time_count%></p>
+        </div>
       <%end%>
     </div>
       <%= link_to "タイマーを作る", new_timer_title_path ,class:"create-timer-title"%>
