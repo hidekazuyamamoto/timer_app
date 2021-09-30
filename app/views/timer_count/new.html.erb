@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="timer-count-new">
+    <h1 class="timer-count-new-title"><%= @timer_title.timer_title%></h1>
+    <h1 class="timer" id="timer"> 0:00:00</h1>
+    <div class="bottons">
+      <button class='botton' id="start">開始/再開</button>
+      <button class='botton' id="stop">一時停止</button>
+    </div>
+    <div class="timer-count-new-forms">
+      <%= form_with url:timer_title_timer_count_index_path(@timer_title.id), local: true do |f| %>
+      <%= f.text_field :time ,id:"timer-count-new-form", class:"hidden"%>
+      <%= f.submit "保存する",class:"botton" %>
+      <%end%>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>

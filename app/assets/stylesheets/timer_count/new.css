@@ -1,0 +1,30 @@
+.timer-count-new{
+  width: 60%;
+  background-color: blanchedalmond;
+  margin: 0 auto;
+}
+.timer-count-new-title{
+  font-size: 50px;
+  text-align: center;
+  font-weight: 900;
+  margin:30px 0 50px;
+}
+.timer{
+  font-size: 80px;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.bottons{
+  text-align: center;
+}
+.botton{
+  height: 50px;
+  width: 120px;
+  margin: 0 5px 30px;
+  font-size: 20px;
+  font-weight: 900;
+}
+.timer-count-new-forms{
+  text-align: center;
+}

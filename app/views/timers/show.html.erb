@@ -3,7 +3,7 @@
   <div class="show-contents">
     <div class="timer-titles">
       <%@timer_title.each do |timer_title|%>
-        <%= link_to timer_title.timer_title ,"#", class:"timer-title"%>
+        <%= link_to timer_title.timer_title ,new_timer_title_timer_count_path(timer_title.id), class:"timer-title"%>
       <%end%>
     </div>
       <%= link_to "タイマーを作る", new_timer_title_path ,class:"create-timer-title"%>
