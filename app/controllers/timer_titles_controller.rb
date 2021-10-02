@@ -10,6 +10,11 @@ class TimerTitlesController < ApplicationController
       render :new
     end
   end
+  def destroy
+    @timer_title = TimerTitle.find(params[:id])
+    @timer_title.destroy
+    redirect_to timer_path(current_user.id)
+  end
 
   private
 

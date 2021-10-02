@@ -10,11 +10,17 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .time{
   font-size: 30px;
   font-weight: 100;
+  margin-top: 20px;
+  border: 3px solid black;
+  display: inline;
+  padding: 10px;
+  font-weight: 900;
 }
 
 .timer-title{
@@ -22,7 +28,7 @@
   font-size: 50px;
   font-weight: 900;
   color: black;
-  margin: 30px;
+  margin: 30px 0 0;
   width: 25%;
 }
 .create-timer-title{
@@ -36,4 +42,13 @@
   box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
   border        : 2px solid #000066;    /* 枠の指定 */
   text-decoration: none;
+}
+.delete-btn{
+  font-size: 30px;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px black ;
+  background-color: rgb(203, 203, 250);
 }
