@@ -28,3 +28,36 @@
 .timer-count-new-forms{
   text-align: center;
 }
+@media screen and (max-width: 479px) {
+  .timer-count-new{
+    width: 60%;
+    background-color: blanchedalmond;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .timer-count-new-title{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+  }
+  .timer{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .bottons{
+    text-align: center;
+  }
+  .botton{
+    height: 50px;
+    width: 120px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .timer-count-new-forms{
+    text-align: center;
+  }
+}
