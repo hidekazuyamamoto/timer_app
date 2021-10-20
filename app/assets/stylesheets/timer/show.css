@@ -52,7 +52,7 @@
   box-shadow: 2px 2px 2px black ;
   background-color: rgb(203, 203, 250);
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 428px) {
   .show-contents{
     width: 100%;
     text-align: center;

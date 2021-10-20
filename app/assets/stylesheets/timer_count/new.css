@@ -28,7 +28,7 @@
 .timer-count-new-forms{
   text-align: center;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 428px) {
   .timer-count-new{
     width: 60%;
     background-color: blanchedalmond;
