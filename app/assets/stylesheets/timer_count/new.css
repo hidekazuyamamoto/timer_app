@@ -51,7 +51,7 @@
     text-align: center;
   }
   .botton{
-    -webkit-text-size-adjust: 100%;
+    -webkit-appearance: none;
     height: 50px;
     width: 120px;
     margin: 5px;
