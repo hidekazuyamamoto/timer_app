@@ -64,6 +64,7 @@
     color: red;
   }
   .submitbtn{
+    -webkit-appearance: none;
     height: 40px;
     width: 100px;
     background-color: aquamarine;
