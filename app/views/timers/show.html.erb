@@ -5,10 +5,10 @@
       <%@timer_title.zip(@time_count) do |timer_title, time_count|%>
         <div class="timer-title">
           <%= link_to timer_title.timer_title ,new_timer_title_timer_count_path(timer_title.id), class:"timer-title"%>
+          <p class="time"><%=time_count%></p>
           <div class="delete-btns">
           <%= link_to "削除する", timer_title_path(timer_title.id), method: :delete, class:"delete-btn"%>
           </div>
-          <p class="time"><%=time_count%></p>
         </div>
       <%end%>
     </div>
