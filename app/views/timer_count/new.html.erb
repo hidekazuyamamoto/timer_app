@@ -14,5 +14,28 @@
       <%end%>
     </div>
   </div>
+  <div class="history">
+    <h1 class="history-title">履歴</h1>
+    <div class="history-table">
+      <div class="daytimes">
+      <h1>日時</h1>
+      </div>
+      <div class="times">
+      <h1>時間</h1>
+      </div>
+    </div>
+      <% if @history.exists?%>
+        <%@history.zip(@history_time) do |history, history_time|%>
+        <div class="history-table">
+          <div class="daytimes">
+          <h1><%=l history.created_at,format: :short%></h1>
+          </div>
+          <div class="times">
+          <h1><%=history_time%></h1>
+          </div>
+        </div>
+        <%end%>
+      <%end%>
+  </div>
 </div>
 <%= render "shared/footer" %>
